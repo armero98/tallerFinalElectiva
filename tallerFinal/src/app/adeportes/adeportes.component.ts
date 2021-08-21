@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Categoria } from '../categoria';
+import { ImaServiceService } from '../servicios/ima-service.service';
 
 @Component({
   selector: 'app-adeportes',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdeportesComponent implements OnInit {
 
-  constructor() { }
+  categorias: Categoria []=[]
+  index: number =0
+  
+  constructor(private imagenesServicio: ImaServiceService) { }
 
   ngOnInit(): void {
+    this.categorias = this.imagenesServicio.categorias
   }
 
+  click(index:number){
+    this.index= index
+  }
 }
+

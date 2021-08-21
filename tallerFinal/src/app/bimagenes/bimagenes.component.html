@@ -1,1 +1,14 @@
-<p>bimagenes works!</p>
+<div class="row">
+    <div class="col-md-6">
+        <img [src]="url" [alt]="url" >
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <app-cbotones (onClick)="anterior()" color="btn-secundary" mensaje="anterior"  ></app-cbotones>
+    </div>
+    <div class="col-md-6">
+        <app-cbotones (onClick)="siguiente()" color="success" mensaje="siguiente" ></app-cbotones>
+    </div>
+</div>

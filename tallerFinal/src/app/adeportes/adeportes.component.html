@@ -1,1 +1,12 @@
-<p>adeportes works!</p>
+<div>
+    <div *ngFor ="let categoria of categorias;let i = index">
+        <app-cbotones (onClick)="click(i)" [mensaje]="categoria.nombre"></app-cbotones>
+       
+     </div>      
+</div>
+<hr>
+<div class="row">
+   <div class="col-md-12">
+         <app-bimagenes [imagenes] ="categorias[index].imagenes"> </app-bimagenes>
+   </div>
+</div>

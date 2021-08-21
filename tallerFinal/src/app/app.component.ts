@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ImaServiceService } from './servicios/ima-service.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'tallerFinal';
+  constructor(public servicioImagen: ImaServiceService){
+    // setTheme('bs3');
+   }
 }
